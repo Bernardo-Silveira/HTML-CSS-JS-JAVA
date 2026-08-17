@@ -4,7 +4,7 @@ A full-stack web application currently under development, built with **Java, Spr
 
 The project is being developed as a learning and practical application to explore modern full-stack development, REST APIs, database integration, and frontend-backend communication.
 
-## 🚀 Technologies
+## Technologies
 
 ### Backend
 
@@ -32,7 +32,7 @@ The project is being developed as a learning and practical application to explor
 - Visual Studio Code
 - pgAdmin 4
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 project/
@@ -53,7 +53,7 @@ project/
 └── README.md
 ```
 
-## 🔌 Backend
+## Backend
 
 The backend is built with Spring Boot and provides a REST API for communication with the frontend.
 
@@ -71,7 +71,7 @@ Backend Working!
 
 This endpoint is used to verify that the Spring Boot server is running correctly.
 
-## 🗄️ Database
+## Database
 
 The project uses **PostgreSQL** as its relational database.
 
@@ -79,7 +79,7 @@ Database integration is handled through **Spring Data JPA** and **Hibernate**.
 
 > Database credentials and other sensitive configuration files are not included in this repository.
 
-## 🌐 Frontend
+## Frontend
 
 The frontend is built using standard web technologies:
 
@@ -89,7 +89,7 @@ The frontend is built using standard web technologies:
 
 It will communicate with the Spring Boot backend through HTTP requests and JSON data.
 
-## ⚙️ Running the Project
+## Running the Project
 
 ### Prerequisites
 
@@ -141,7 +141,7 @@ If everything is working correctly, the API should return:
 Backend Working!
 ```
 
-## 🔐 Environment Configuration
+## Environment Configuration
 
 Local database credentials should be configured separately and should **never be committed to GitHub**.
 
@@ -155,7 +155,7 @@ spring.datasource.password=DATABASE_PASSWORD
 
 Use your own local PostgreSQL credentials when configuring the application.
 
-## 🎯 Goals
+## Goals
 
 The main goals of this project are to:
 
@@ -166,6 +166,6 @@ The main goals of this project are to:
 - Practice Git and GitHub workflows
 - Develop a complete application from frontend to database
 
-## 📄 License
+## License
 
 This project is currently intended for educational and personal development purposes.
