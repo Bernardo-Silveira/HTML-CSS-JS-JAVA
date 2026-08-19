@@ -1,46 +1,50 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML-CSS-JS-JAVA</title>
+    <title>Cadastro de Cliente</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./frontend/css/style.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
-
   <body>
-    <h1 id="heading">HTML-CSS-JS-JAVA</h1>
-    <hr />
-    <div class="text">
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. At provident
-        voluptatum accusantium? Suscipit veniam voluptate voluptatem, ratione
-        tempora hic expedita voluptas, nihil at incidunt nobis maxime dolores
-        unde! Tempore, voluptate.
-      </p>
-      <p>
-        Est harum libero, inventore sequi sunt officia itaque labore commodi
-        illo, odio, aut nostrum. Provident adipisci magnam a voluptates? Error
-        ratione doloremque quaerat architecto neque vero at culpa necessitatibus
-        voluptate?
-      </p>
-      <p>
-        Illo, molestiae ducimus praesentium unde consequuntur, accusamus alias
-        vel soluta temporibus, nostrum beatae numquam? Optio id deserunt,
-        asperiores labore, est explicabo sit delectus dolor laborum nisi earum
-        nostrum impedit eveniet.
-      </p>
-    </div>
+    <div class="container">
+      <div class="form-container">
+        <h3 class="mb-4 text-center">Register Client</h3>
 
-    <div>
-      <nav>
-        <ul>
-          <li><a href="https://chatgpt.com/" class="btn-link">ChatGPT</a></li>
-          <li>
-            <a href="https://gemini.google.com/" class="btn-link">Gemini</a>
-          </li>
-          <li><a href="https://claude.ai/new" class="btn-link">Claude</a></li>
-        </ul>
-      </nav>
+        <form id="formRegister">
+          <div class="mb-3">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="name" required />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">To send</button>
+        </form>
+
+        <!-- Feedback visual -->
+        <div id="mensage" class="alert mt-3 d-none" role="alert"></div>
+      </div>
     </div>
 
     <script src="./frontend/js/main.js"></script>
