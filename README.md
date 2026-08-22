@@ -37,9 +37,9 @@ The project is being developed as a learning and practical application to explor
 ```text
 project/
 ├── frontend/
-│   ├── index.html
 │   ├── css/
 │   └── js/
+│── index.html
 │
 ├── backend/
 │   ├── src/
