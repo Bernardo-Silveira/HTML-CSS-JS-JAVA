@@ -1,11 +1,11 @@
 document
-  .getElementById("formCadastro")
+  .getElementById("formRegister")
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const name = document.getElementById("nome").value;
+    const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
-    const mensageDiv = document.getElementById("mensagem");
+    const mensageDiv = document.getElementById("mensage");
 
     const data = {
       name: name,
@@ -22,9 +22,9 @@ document
       });
 
       if (response.ok) {
-        const respostaTexto = await response.text();
+        const responseText = await response.text();
         mensageDiv.className = "alert alert-success mt-3";
-        mensageDiv.textContent = respostaTexto;
+        mensageDiv.textContent = responseText;
         mensageDiv.classList.remove("d-none");
         document.getElementById("formRegister").reset();
       } else {
