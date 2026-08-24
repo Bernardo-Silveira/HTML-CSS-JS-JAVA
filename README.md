@@ -87,8 +87,6 @@ The frontend is built using standard web technologies:
 - CSS
 - JavaScript
 
-It will communicate with the Spring Boot backend through HTTP requests and JSON data.
-
 ## Running the Project
 
 ### Prerequisites
