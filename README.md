@@ -60,7 +60,7 @@ The backend is built with Spring Boot and provides a REST API for communication 
 The application currently includes a basic test endpoint:
 
 ```http
-GET /api/test
+GET /api/clients
 ```
 
 Response:
