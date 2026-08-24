@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class TestController {
+public class ClientController {
 
-    @GetMapping("/api/test")
+    @GetMapping("/api/clients")
     public String test() {
         return "Backend Working!";
     }
