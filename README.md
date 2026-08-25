@@ -38,8 +38,8 @@ The project is being developed as a learning and practical application to explor
 project/
 ├── frontend/
 │   ├── css/
-│   └── js/
-│── index.html
+|   ├── js/
+│   └── index.html
 │
 ├── backend/
 │   ├── src/
