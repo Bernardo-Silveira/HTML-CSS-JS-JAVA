@@ -60,13 +60,8 @@ The backend is built with Spring Boot and provides a REST API for communication 
 The application currently includes a basic test endpoint:
 
 ```http
-GET /api/clients
-```
-
-Response:
-
-```text
-Backend Working!
+GET /api/test
+POST /api/clients
 ```
 
 This endpoint is used to verify that the Spring Boot server is running correctly.
