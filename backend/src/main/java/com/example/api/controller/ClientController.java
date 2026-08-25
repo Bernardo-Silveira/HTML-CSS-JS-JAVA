@@ -3,6 +3,7 @@ package com.example.api.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.api.model.Client;
+import com.example.api.repository.ClientRepository;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,12 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @CrossOrigin
 public class ClientController {
 
+    private final ClientRepository clientRepository;
+
+    public ClientController(ClientRepository clientRepository) {
+        this.clientRepository = clientRepository;
+    }
+
     @PostMapping
-    public Client postMethodName(@RequestBody Client client) {
+    public Client createClient(@RequestBody Client client) {
         System.out.println("Name: " + client.getName());
         System.out.println("Email: " + client.getEmail());
 
-        return client;
+        return clientRepository.save(client);
     }
     
 }
