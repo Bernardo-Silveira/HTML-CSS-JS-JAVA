@@ -125,13 +125,14 @@ http://localhost:8080
 Open:
 
 ```text
-http://localhost:8080/api/test
+http://localhost:8080/api/clients
 ```
 
 If everything is working correctly, the API should return:
 
 ```text
-Backend Working!
+-> Names
+-> Emails
 ```
 
 ## Environment Configuration
@@ -141,7 +142,7 @@ Local database credentials should be configured separately and should **never be
 For example:
 
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/DATABASE_NAME
+spring.datasource.url=jdbc:postgresql://localhost:5432/database_one
 spring.datasource.username=DATABASE_USER
 spring.datasource.password=DATABASE_PASSWORD
 ```
