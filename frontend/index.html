@@ -17,13 +17,40 @@
 
         <form id="formRegister">
           <div class="mb-3">
-            <label for="name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="name" required />
+            <label for="name" class="form-label">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Your Name"
+              required
+            />
           </div>
 
           <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" required />
+            <label for="email" class="form-label">E-mail:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Your E-mail"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password:</label>
+            <input
+              type="password"
+              id="inputPassword"
+              class="form-control"
+              aria-describedby="passwordHelpBlock"
+              placeholder="Your Password"
+              required
+            />
+            <div id="passwordHelpBlock" class="form-text">
+              Your password be between 8 and 15 characters.
+            </div>
           </div>
 
           <button type="submit" class="btn btn-primary w-100">Send</button>

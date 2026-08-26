@@ -1,11 +1,9 @@
 package com.example.api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 @Entity
+@Table
 public class Client {
 
     @Id
@@ -14,6 +12,7 @@ public class Client {
 
     private String name;
     private String email;
+    private String password;
 
     public Client() {
     }
@@ -40,5 +39,13 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

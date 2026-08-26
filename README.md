@@ -39,6 +39,10 @@ project/
 ├── frontend/
 │   ├── css/
 |   ├── js/
+<<<<<<< HEAD
+|   ├── img/
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 │   └── index.html
 │
 ├── backend/
@@ -47,9 +51,15 @@ project/
 │   │   │   ├── java/
 │   │   │   └── resources/
 │   │   └── test/
+<<<<<<< HEAD
+│   └── pom.xml
+│
+├── .gitignore
+=======
 │   ├── pom.xml
 │   └── .gitignore
 │
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 └── README.md
 ```
 
@@ -60,7 +70,10 @@ The backend is built with Spring Boot and provides a REST API for communication 
 The application currently includes a basic test endpoint:
 
 ```http
+<<<<<<< HEAD
+=======
 GET /api/test
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 POST /api/clients
 ```
 
@@ -133,6 +146,10 @@ If everything is working correctly, the API should return:
 ```text
 -> Names
 -> Emails
+<<<<<<< HEAD
+-> Passwords
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 ```
 
 ## Environment Configuration
@@ -142,7 +159,11 @@ Local database credentials should be configured separately and should **never be
 For example:
 
 ```properties
+<<<<<<< HEAD
+spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DATABASE
+=======
 spring.datasource.url=jdbc:postgresql://localhost:5432/database_one
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 spring.datasource.username=DATABASE_USER
 spring.datasource.password=DATABASE_PASSWORD
 ```

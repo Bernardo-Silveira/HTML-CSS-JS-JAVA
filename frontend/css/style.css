@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Asap+Sharp:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 body {
   background-color: #f8f9fa;
 }
@@ -9,3 +14,50 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+<<<<<<< HEAD
+
+.mb-4 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  border: 2px solid #220000;
+  border-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+  font-weight: 100;
+  font-style: oblique;
+  padding: 4px;
+  color: #fff;
+  background-image: url(/frontend/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mb-3 {
+  font-style: oblique;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid #000;
+  padding: 1vh;
+  box-shadow: 0 0 1vh rgba(0, 0, 0, 1);
+}
+
+.mb-4:hover {
+  color: #0400ff;
+  animation: rotate 2s 1s infinite linear alternate-reverse;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+#inputPassword {
+  color: rgb(1, 49, 49);
+}
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
