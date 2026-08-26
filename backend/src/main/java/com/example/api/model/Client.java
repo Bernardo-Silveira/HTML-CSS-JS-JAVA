@@ -1,9 +1,18 @@
 package com.example.api.model;
 
+<<<<<<< HEAD
 import jakarta.persistence.*;
 
 @Entity
 @Table
+=======
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+
+@Entity
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 public class Client {
 
     @Id
@@ -12,7 +21,10 @@ public class Client {
 
     private String name;
     private String email;
+<<<<<<< HEAD
     private String password;
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 
     public Client() {
     }
@@ -40,6 +52,7 @@ public class Client {
     public void setEmail(String email) {
         this.email = email;
     }
+<<<<<<< HEAD
 
     public String getPassword() {
         return password;
@@ -48,4 +61,6 @@ public class Client {
     public void setPassword(String password) {
         this.password = password;
     }
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 }

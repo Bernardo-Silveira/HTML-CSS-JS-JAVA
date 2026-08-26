@@ -6,7 +6,10 @@ document
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const password = document.getElementById("inputPassword").value;
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 >>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 
@@ -16,7 +19,10 @@ document
       name: name,
       email: email,
 <<<<<<< HEAD
+<<<<<<< HEAD
       password: password,
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 >>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
     };

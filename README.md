@@ -40,7 +40,10 @@ project/
 │   ├── css/
 |   ├── js/
 <<<<<<< HEAD
+<<<<<<< HEAD
 |   ├── img/
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 >>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 │   └── index.html
@@ -52,9 +55,15 @@ project/
 │   │   │   └── resources/
 │   │   └── test/
 <<<<<<< HEAD
+<<<<<<< HEAD
 │   └── pom.xml
 │
 ├── .gitignore
+=======
+│   ├── pom.xml
+│   └── .gitignore
+│
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 │   ├── pom.xml
 │   └── .gitignore
@@ -71,6 +80,10 @@ The application currently includes a basic test endpoint:
 
 ```http
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+GET /api/test
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 GET /api/test
 >>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
@@ -147,7 +160,10 @@ If everything is working correctly, the API should return:
 -> Names
 -> Emails
 <<<<<<< HEAD
+<<<<<<< HEAD
 -> Passwords
+=======
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 >>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 ```
@@ -160,7 +176,11 @@ For example:
 
 ```properties
 <<<<<<< HEAD
+<<<<<<< HEAD
 spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DATABASE
+=======
+spring.datasource.url=jdbc:postgresql://localhost:5432/database_one
+>>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 =======
 spring.datasource.url=jdbc:postgresql://localhost:5432/database_one
 >>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
