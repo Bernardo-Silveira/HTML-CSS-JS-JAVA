@@ -1,17 +1,9 @@
 package com.example.api.controller;
 
-<<<<<<< HEAD
 import com.example.api.model.Client;
 import com.example.api.repository.ClientRepository;
 
 import org.springframework.web.bind.annotation.RestController;
-=======
-import org.springframework.web.bind.annotation.RestController;
-
-import com.example.api.model.Client;
-import com.example.api.repository.ClientRepository;
-
->>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -32,15 +24,8 @@ public class ClientController {
     public Client createClient(@RequestBody Client client) {
         System.out.println("Name: " + client.getName());
         System.out.println("Email: " + client.getEmail());
-<<<<<<< HEAD
         System.out.println("Password: " + client.getPassword());
 
         return clientRepository.save(client);
     }   
-=======
-
-        return clientRepository.save(client);
-    }
-    
->>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 }
