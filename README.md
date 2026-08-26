@@ -39,13 +39,7 @@ project/
 ├── frontend/
 │   ├── css/
 |   ├── js/
-<<<<<<< HEAD
-<<<<<<< HEAD
 |   ├── img/
-=======
->>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
-=======
->>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
 │   └── index.html
 │
 ├── backend/
@@ -54,21 +48,10 @@ project/
 │   │   │   ├── java/
 │   │   │   └── resources/
 │   │   └── test/
-<<<<<<< HEAD
-<<<<<<< HEAD
-│   └── pom.xml
-│
-├── .gitignore
-=======
+|   |
 │   ├── pom.xml
 │   └── .gitignore
-│
->>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
-=======
-│   ├── pom.xml
-│   └── .gitignore
-│
->>>>>>> 984f4764b48fbc07fed2e1177b809cda2717b5df
+|
 └── README.md
 ```
 
@@ -115,7 +98,7 @@ Make sure you have installed:
 
 ```bash
 git clone https://github.com/Bernardo-Silveira/HTML-CSS-JS-JAVA.git
-cd YOUR_PROJECT_FOLDER
+cd HTML-CSS-JS-JAVA
 ```
 
 ### Run the backend
@@ -151,7 +134,6 @@ If everything is working correctly, the API should return:
 ```text
 -> Names
 -> Emails
--> Passwords
 ```
 
 ## Environment Configuration
