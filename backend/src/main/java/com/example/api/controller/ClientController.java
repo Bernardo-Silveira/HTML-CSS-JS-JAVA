@@ -1,7 +1,9 @@
 package com.example.api.controller;
 
 import com.example.api.model.Client;
-import com.example.api.repository.ClientRepository;
+import com.example.api.service.ClientService;
+
+import jakarta.validation.Valid;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -14,18 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @CrossOrigin
 public class ClientController {
 
-    private final ClientRepository clientRepository;
+    private final ClientService clientService;
 
-    public ClientController(ClientRepository clientRepository) {
-        this.clientRepository = clientRepository;
+    public ClientController(ClientService clientService) {
+        this.clientService = clientService;
     }
 
     @PostMapping
-    public Client createClient(@RequestBody Client client) {
-        System.out.println("Name: " + client.getName());
-        System.out.println("Email: " + client.getEmail());
-        System.out.println("Password: " + client.getPassword());
-
-        return clientRepository.save(client);
-    }   
+    public Client createClient(@Valid @RequestBody Client client) {
+        return clientService.register(client);
+    }
 }

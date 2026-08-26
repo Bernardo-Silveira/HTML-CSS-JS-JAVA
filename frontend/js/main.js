@@ -9,11 +9,11 @@ document
 
     const messageDiv = document.getElementById("message");
 
-    const data = {
-      name: name,
-      email: email,
-      password: password,
-    };
+    if (password.length < 8 || password.length > 15) {
+      messageDiv.className = "alert alert-danger mt-3";
+      messageDiv.textContent =
+        "Required minimum: 8 characters and maximum is 15 characters. ";
+    }
 
     try {
       const response = await fetch("http://localhost:8080/api/clients", {
@@ -21,7 +21,11 @@ document
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          password: password,
+        }),
       });
 
       if (response.ok) {

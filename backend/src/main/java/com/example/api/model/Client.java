@@ -1,6 +1,7 @@
 package com.example.api.model;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table
@@ -8,6 +9,7 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Size(min = 8, max = 15)
     private Long id;
 
     private String name;
