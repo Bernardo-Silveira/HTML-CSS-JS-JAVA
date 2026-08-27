@@ -21,7 +21,7 @@ public class Client {
     private String email;
 
     @NotBlank
-    @Size(min = 8, max = 15)
+    @Size(min = 8)
     private String password;
 
     public Client() {

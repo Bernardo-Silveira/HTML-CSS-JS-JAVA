@@ -17,6 +17,7 @@ public class SecurityConfig {
             .cors(cors -> {})
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.POST, "/api/clients").permitAll()
+                .requestMatchers("/error").permitAll()
                 .anyRequest().authenticated()
             );
 
