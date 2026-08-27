@@ -9,15 +9,6 @@ document
 
     const messageDiv = document.getElementById("message");
 
-    if (password.length < 8 || password.length > 15) {
-      messageDiv.className = "alert alert-danger mt-3";
-      messageDiv.textContent =
-        "Required minimum: 8 characters and maximum is 15 characters. ";
-    } else {
-      messageDiv.className = "alert alert-sucess mt-3";
-      messageDiv.textContent = "Sucessfully, you was registered";
-    }
-
     try {
       const response = await fetch("http://localhost:8080/api/clients", {
         method: "POST",
