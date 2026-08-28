@@ -3,9 +3,11 @@ document
   .addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("inputPassword").value;
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("inputPassword").value,
+    };
 
     const messageDiv = document.getElementById("message");
 
@@ -15,11 +17,7 @@ document
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-        }),
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {

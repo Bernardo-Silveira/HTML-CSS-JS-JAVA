@@ -9,6 +9,8 @@ import jakarta.validation.constraints.Size;
 @Table(name = "clients")
 public class Client {
 
+    public static Object get;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

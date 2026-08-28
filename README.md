@@ -62,7 +62,7 @@ The backend is built with Spring Boot and provides a REST API for communication 
 The application currently includes a basic test endpoint:
 
 ```http
-POST /api/clients
+GET /api/clients
 ```
 
 This endpoint is used to verify that the Spring Boot server is running correctly.
