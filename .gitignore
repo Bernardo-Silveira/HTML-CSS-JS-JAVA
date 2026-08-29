@@ -25,6 +25,3 @@ application.properties
 # System
 .DS_Store
 Thumbs.db
-
-# List Users
-ListUsers.java

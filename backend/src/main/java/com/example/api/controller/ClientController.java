@@ -5,11 +5,8 @@ import com.example.api.service.ClientService;
 
 import jakarta.validation.Valid;
 
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
@@ -22,7 +19,8 @@ public class ClientController {
         this.clientService = clientService;
     }
 
-    @GetMapping("/api/clients")
+    @PostMapping("/clients")
+    @ResponseStatus(HttpStatus.CREATED)
     public Client createClient(@Valid @RequestBody Client client) {
         return clientService.register(client);
     }

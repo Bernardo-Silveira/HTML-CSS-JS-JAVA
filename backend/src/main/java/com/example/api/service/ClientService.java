@@ -8,18 +8,28 @@ import com.example.api.repository.ClientRepository;
 
 @Service
 public class ClientService {
+
     private final ClientRepository clientRepository;
+    private final BCryptPasswordEncoder passwordEncoder;
 
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    public ClientService(
+            ClientRepository clientRepository,
+            BCryptPasswordEncoder passwordEncoder) {
 
-    public ClientService(ClientRepository clientRepository) {
         this.clientRepository = clientRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public Client register(Client client) {
-        String passwordHash = passwordEncoder.encode(client.getPassword());
 
-        client.setPassword(passwordHash);
+        if (clientRepository.existsByEmail(client.getEmail())) {
+            throw new IllegalArgumentException("Email already registered");
+        }
+
+        client.setPassword(
+            passwordEncoder.encode(client.getPassword())
+        );
+
         return clientRepository.save(client);
     }
 }
