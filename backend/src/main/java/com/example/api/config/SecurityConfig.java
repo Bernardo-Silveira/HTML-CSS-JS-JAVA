@@ -12,7 +12,7 @@ public class SecurityConfig {
 
     private final CorsConfigurationSource corsConfigurationSource;
 
-    SecurityConfig(CorsConfigurationSource corsConfigurationSource) {
+    public SecurityConfig(CorsConfigurationSource corsConfigurationSource) {
         this.corsConfigurationSource = corsConfigurationSource;
     }
 
@@ -23,13 +23,11 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-
         http
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.configurationSource(corsConfigurationSource))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/clients").permitAll()
-                .requestMatchers("/error").permitAll()
+                .requestMatchers("/api/clients", "/error").permitAll()
                 .anyRequest().authenticated()
             );
 
