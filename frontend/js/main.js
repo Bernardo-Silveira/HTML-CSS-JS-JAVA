@@ -4,8 +4,8 @@ document
     event.preventDefault();
 
     const data = {
-      name: document.getElementById("name").value,
-      email: document.getElementById("email").value,
+      name: document.getElementById("name").value.trim(),
+      email: document.getElementById("email").value.trim(),
       password: document.getElementById("inputPassword").value,
     };
 
@@ -20,18 +20,33 @@ document
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        const responseText = await response.text();
-        messageDiv.className = "alert alert-success mt-3";
-        messageDiv.textContent = responseText;
-        messageDiv.classList.remove("d-none");
-        document.getElementById("formRegister").reset();
-      } else {
-        throw new Error("Error processor request of server.");
+      const responseBody = await response.text();
+      let responseData = null;
+
+      try {
+        responseData = responseBody ? JSON.parse(responseBody) : null;
+      } catch {
+        responseData = null;
       }
+
+      if (!response.ok) {
+        const errorMessage =
+          responseData?.message ||
+          responseData?.error ||
+          "Could not register the client.";
+        throw new Error(errorMessage);
+      }
+
+      messageDiv.className = "alert alert-success mt-3";
+      messageDiv.textContent = "Client registered successfully.";
+      messageDiv.classList.remove("d-none");
+      document.getElementById("formRegister").reset();
     } catch (error) {
       messageDiv.className = "alert alert-danger mt-3";
-      messageDiv.textContent = "Error of conection with server.";
+      messageDiv.textContent =
+        error instanceof TypeError
+          ? "Could not connect to the server."
+          : error.message;
       messageDiv.classList.remove("d-none");
     }
   });
