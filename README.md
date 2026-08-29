@@ -1,18 +1,20 @@
 # Full Stack Project
 
-A full-stack web application currently under development, built with **Java, Spring Boot, PostgreSQL, HTML, CSS, and JavaScript**.
+A full-stack web application built with **Java, Spring Boot, PostgreSQL, HTML, CSS, and JavaScript**.
 
-The project is being developed as a learning and practical application to explore modern full-stack development, REST APIs, database integration, and frontend-backend communication.
+The project demonstrates a simple client registration flow from the frontend to a REST API and PostgreSQL database.
 
 ## Technologies
 
 ### Backend
 
-- Java
+- Java 26
 - Spring Boot
-- Spring Web
+- Spring Security
+- Spring Web MVC
 - Spring Data JPA
 - Hibernate
+- Bean Validation
 - Maven
 
 ### Database
@@ -24,6 +26,7 @@ The project is being developed as a learning and practical application to explor
 - HTML5
 - CSS3
 - JavaScript
+- Bootstrap 5
 
 ### Tools
 
@@ -35,11 +38,11 @@ The project is being developed as a learning and practical application to explor
 ## Project Structure
 
 ```text
-project/
+HTML-CSS-JS-JAVA/
 ├── frontend/
 │   ├── css/
-|   ├── js/
-|   ├── img/
+│   ├── js/
+│   ├── img/
 │   └── index.html
 │
 ├── backend/
@@ -48,118 +51,108 @@ project/
 │   │   │   ├── java/
 │   │   │   └── resources/
 │   │   └── test/
-|   |
 │   ├── pom.xml
 │   └── .gitignore
-|
+│
+├── .gitignore
 └── README.md
 ```
 
-## Backend
+## API
 
-The backend is built with Spring Boot and provides a REST API for communication with the frontend.
-
-The application currently includes a basic test endpoint:
+### Register a client
 
 ```http
-GET /api/clients
+POST /api/clients
+Content-Type: application/json
 ```
 
-This endpoint is used to verify that the Spring Boot server is running correctly.
+Example request:
+
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
+}
+```
+
+The password is validated and stored using BCrypt hashing. The API response intentionally contains only the client's `id`, `name`, and `email`, never the password.
+
+### Validation
+
+- Name is required.
+- Email is required and must have a valid email format.
+- Password is required and must contain at least 8 characters.
+- An email cannot be registered more than once.
 
 ## Database
 
-The project uses **PostgreSQL** as its relational database.
+The application uses **PostgreSQL** with **Spring Data JPA** and **Hibernate**.
 
-Database integration is handled through **Spring Data JPA** and **Hibernate**.
-
-> Database credentials and other sensitive configuration files are not included in this repository.
-
-## Frontend
-
-The frontend is built using standard web technologies:
-
-- HTML
-- CSS
-- JavaScript
+Database credentials are intentionally excluded from Git. Copy the example configuration to a local `application.properties` file and replace the placeholders with your own credentials.
 
 ## Running the Project
 
 ### Prerequisites
 
-Make sure you have installed:
+Install:
 
-- Java JDK
+- Java JDK 26
 - Maven
 - PostgreSQL
 - Git
 
-### Clone the repository
+### Clone
 
 ```bash
 git clone https://github.com/Bernardo-Silveira/HTML-CSS-JS-JAVA.git
 cd HTML-CSS-JS-JAVA
 ```
 
-### Run the backend
+### Configure the database
 
-Navigate to the backend directory:
+Create a PostgreSQL database, then create `backend/src/main/resources/application.properties` using the example configuration in `application-example.properties`.
+
+### Run the backend
 
 ```bash
 cd backend
-```
-
-Then run:
-
-```bash
 mvn spring-boot:run
 ```
 
-The backend will normally be available at:
+The API runs at:
 
 ```text
 http://localhost:8080
 ```
 
-### Test the API
+### Run the frontend
 
-Open:
-
-```text
-http://localhost:8080/api/clients
-```
-
-If everything is working correctly, the API should return:
+Serve the `frontend` directory using a local development server such as VS Code Live Server. The current CORS configuration allows:
 
 ```text
--> Names
--> Emails
+http://localhost:5500
+http://127.0.0.1:5500
 ```
 
-## Environment Configuration
+Open `frontend/index.html` through the development server and submit the registration form.
 
-Local database credentials should be configured separately and should **never be committed to GitHub**.
+## Security Notes
 
-For example:
-
-```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/YOUR_DATABASE
-spring.datasource.username=DATABASE_USER
-spring.datasource.password=DATABASE_PASSWORD
-```
-
-Use your own local PostgreSQL credentials when configuring the application.
+- Passwords are hashed with BCrypt before being stored.
+- Local `application.properties` files are ignored by Git.
+- The API does not return password hashes to the frontend.
+- CSRF is disabled because the current application exposes a stateless JSON API. Authentication/authorization can be expanded as the project evolves.
 
 ## Goals
 
-The main goals of this project are to:
-
-- Practice full-stack development
-- Build REST APIs with Spring Boot
-- Work with relational databases
-- Connect frontend applications to backend APIs
-- Practice Git and GitHub workflows
-- Develop a complete application from frontend to database
+- Practice full-stack development.
+- Build REST APIs with Spring Boot.
+- Work with PostgreSQL and JPA.
+- Connect a JavaScript frontend to a Java backend.
+- Practice validation and password hashing.
+- Improve Git and GitHub workflows.
 
 ## License
 
